@@ -1,0 +1,25 @@
+description: >
+  Runs tests via newman cli
+
+parameters:
+  collection:
+    type: string
+    default: ""
+    description: "Postman collection to run"
+  environment:
+    type: string
+    default: ""
+    description: "Postman environment to use"
+  reporter:
+    type: string
+    default: "--reporters cli,testrail"
+    description: "Custom reporter to use with newman"
+
+steps:
+  - newman/newman-run:
+      collection: <<parameters.collection>>
+      environment: <<parameters.environment>>
+      additional-options: << parameters.reporter >>
+  - store_artifacts:
+      path: ~/project/newman
+

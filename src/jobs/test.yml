@@ -1,0 +1,21 @@
+description: Run Tests
+
+executor: newman
+
+parameters:
+  collection:
+    type: string
+    description: 'Collection to run'
+  environment:
+    type: string
+    description: 'Environment to run'
+  additional-options:
+    type: string
+    default: '--reporter cli,testrail'
+    description: 'Additional Newman Options'
+
+steps:
+  - install_reporter
+  - run_newman:
+      collection: << parameters.collection >>
+      environment: << parameters.environment >>

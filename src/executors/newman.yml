@@ -1,0 +1,4 @@
+description: >
+  Postman Newman docker image
+docker:
+  - image: 'postman/newman:5.3.1'
