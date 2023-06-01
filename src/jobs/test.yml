@@ -1,4 +1,4 @@
-description: Run Tests
+description: Run Tests with newman cli and report results
 
 executor: newman
 
