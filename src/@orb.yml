@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  Uplight Orb to run and report Automated Postman API tests. This simplifies the test process when 
+  Uplight Orb to run and report Automated Postman API tests. This simplifies the test process when
   integrating postman into service build pipelines.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
