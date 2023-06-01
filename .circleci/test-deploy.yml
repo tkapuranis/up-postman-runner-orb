@@ -52,5 +52,6 @@ workflows:
           requires:
             - orb-tools/pack
             - command-test
+            - up-postman-runner-orb/test
           context: orb-publishing
           filters: *release-filters

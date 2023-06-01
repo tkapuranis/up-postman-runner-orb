@@ -9,7 +9,7 @@ parameters:
   environment:
     type: string
     description: 'Environment to run'
-  additional-options:
+  additional_options:
     type: string
     default: '--reporter cli,testrail'
     description: 'Additional Newman Options'
