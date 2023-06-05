@@ -15,8 +15,8 @@ parameters:
     description: 'Additional Newman Options'
 
 steps:
-  - install_reporter
   - set_test_run_name
+  - install_reporter
   - run_newman:
       collection: << parameters.collection >>
       environment: << parameters.environment >>
