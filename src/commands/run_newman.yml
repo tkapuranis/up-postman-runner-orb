@@ -10,6 +10,10 @@ parameters:
     type: string
     default: ""
     description: "Postman environment to use"
+  folder:
+    description: Run requests within a particular folder/folders in a collection
+    type: string
+    default: ''
   reporter:
     type: string
     default: "--reporters cli,testrail"
@@ -19,6 +23,7 @@ steps:
   - newman/newman-run:
       collection: <<parameters.collection>>
       environment: <<parameters.environment>>
+      folder: <<parameters.folder>>
       additional-options: << parameters.reporter >>
   - store_artifacts:
       path: ~/project/newman
