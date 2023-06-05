@@ -3,4 +3,4 @@ description: >
 docker:
   - image: 'postman/newman:5.3.1'
     environment:
-      TESTRAIL_TITLE: "Run Title"
+      TESTRAIL_TITLE: "$TESTRAIL_TITLE"
