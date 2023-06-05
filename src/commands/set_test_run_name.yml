@@ -4,5 +4,5 @@ description: >
 steps:
   - run:
       name: Set TESTRAIL_TITLE
-      environment: 
+      environment:
         TESTRAIL_TITLE: <<include(scripts/setRunName.sh)>>
