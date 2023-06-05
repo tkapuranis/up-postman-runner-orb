@@ -33,7 +33,7 @@ jobs:
           npm list -g newman-reporter-testrail
       - up-postman-runner-orb/set_test_run_name
       - run: |
-          echo $TESTRAIL_TITLE
+          echo $BASH_ENV
 workflows:
   test-deploy:
     jobs:
