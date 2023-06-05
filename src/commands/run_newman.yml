@@ -21,9 +21,10 @@ parameters:
 
 steps:
   - newman/newman-run:
+      name: "Run Newman CLI"
       collection: <<parameters.collection>>
       environment: <<parameters.environment>>
       folder: <<parameters.folder>>
-      additional-options: << parameters.reporter >>
+      additional-options: <<parameters.reporter>>
   - store_artifacts:
       path: ~/project/newman
