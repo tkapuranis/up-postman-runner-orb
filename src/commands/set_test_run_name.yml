@@ -4,7 +4,4 @@ description: >
 steps:
   - run:
       name: Set TESTRAIL_TITLE
-      command: |
-        DATENOW=$( date '+%F_%H:%M:%S' )
-        TESTRAIL_TITLE="$CIRCLE_PROJECT_REPONAME $CIRCLE_BRANCH $DATENOW"
-        echo 'export TESTRAIL_TITLE='${TESTRAIL_TITLE}'
+      command: <<include(scripts/setRunName.sh)>>
