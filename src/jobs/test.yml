@@ -16,6 +16,7 @@ parameters:
 
 steps:
   - install_reporter
+  - set_test_run_name
   - run_newman:
       collection: << parameters.collection >>
       environment: << parameters.environment >>

@@ -1,0 +1,10 @@
+description: >
+  "Command to set the name of the test run that will be created in Testrail"
+
+steps:
+  - run:
+      name: Set TESTRAIL_TITLE
+      command: |
+        DATENOW=$( date '+%F_%H:%M:%S' )
+        TESTRAIL_TITLE="$CIRCLE_PROJECT_REPONAME $CIRCLE_BRANCH $DATENOW"
+        echo 'export TESTRAIL_TITLE='${TESTRAIL_TITLE}'
