@@ -3,4 +3,4 @@ description: >
 docker:
   - image: 'postman/newman:5.3.1'
     environment:
-      TESTRAIL_TITLE: "$TESTRAIL_TITLE"
+      TESTRAIL_TITLE: "$CIRCLE_PROJECT_REPONAME $CIRCLE_BRANCH $( date '+%F_%H:%M:%S' )"
