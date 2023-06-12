@@ -69,7 +69,7 @@ parameters:
         https://github.com/postmanlabs/newman#ssl-client-certificates
         https://github.com/postmanlabs/newman#reporters
     type: string
-    default: ''
+    default: '--reporter cli,testrail'
 steps:
   steps: 
     - run: >
