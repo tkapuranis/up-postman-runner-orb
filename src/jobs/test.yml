@@ -3,7 +3,6 @@ description: Run Tests with newman cli and report results
 executor: newman
 
 parameters:
-  parameters:
   collection:
     description: Collection file path or URL
     type: string
