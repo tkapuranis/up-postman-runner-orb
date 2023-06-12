@@ -86,7 +86,6 @@ parameters:
     default: newman
 
 steps:
-  - checkout
   - install_reporter
   - run_newman:
       collection: << parameters.collection >>
