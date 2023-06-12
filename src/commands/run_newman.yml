@@ -70,11 +70,17 @@ parameters:
         https://github.com/postmanlabs/newman#reporters
     type: string
     default: ''
+  reporter:
+    description:
+      Custom reporter to use for results
+    type: string
+    default: ''
 steps:
   - run: >
       source "$BASH_ENV" &&
       newman run << parameters.collection >>
       <<# parameters.environment >>--environment << parameters.environment >><</ parameters.environment >>
+      <<# parameters.reporter >>--reporter << parameters.reporter >><</ parameters.reporter >>
       <<# parameters.globals >>--globals << parameters.globals >><</ parameters.globals >>
       <<# parameters.iteration-count >>--iteration-count << parameters.iteration-count >><</ parameters.iteration-count >>
       <<# parameters.iteration-data >>--iteration-data << parameters.iteration-data >><</ parameters.iteration-data >>

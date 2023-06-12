@@ -71,6 +71,11 @@ parameters:
         https://github.com/postmanlabs/newman#reporters
     type: string
     default: ''
+  reporter:
+    description:
+      Custom reporter to use for results
+    type: string
+    default: ''
   persist-exports:
     description: Whether to persist exports from the Newman run.
     type: boolean
@@ -103,6 +108,7 @@ steps:
       ignore-redirects: << parameters.ignore-redirects >>
       delay-request: << parameters.delay-request >>
       additional-options: << parameters.additional-options >>
+      reporter: << parameters.reporter >>
   - persist_to_workspace:
       when: << parameters.persist-exports >>
       root: << parameters.persist-workspace-root >>
