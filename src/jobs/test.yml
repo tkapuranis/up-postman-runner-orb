@@ -6,7 +6,7 @@ parameters:
   collection:
     type: string
     description: 'Collection to run'
-  environment:
+  collection-environment:
     type: string
     description: 'Environment to run'
   additional_options:
@@ -15,8 +15,7 @@ parameters:
     description: 'Additional Newman Options'
 
 steps:
-  - set_test_run_name
   - install_reporter
   - run_newman:
       collection: << parameters.collection >>
-      environment: << parameters.environment >>
+      environment: << parameters.collection-environment >>
