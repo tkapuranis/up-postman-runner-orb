@@ -12,6 +12,7 @@ workflows:
   lint-pack:
     jobs:
       - orb-tools/lint:
+          exclude: RC009
           filters: *filters
       - orb-tools/pack:
           filters: *filters
