@@ -71,7 +71,7 @@ parameters:
         https://github.com/postmanlabs/newman#reporters
     type: string
     default: ''
-  reporter:
+  reporters:
     description:
       Custom reporter to use for results
     type: string

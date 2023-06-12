@@ -80,7 +80,7 @@ steps:
       source "$BASH_ENV" &&
       newman run << parameters.collection >>
       <<# parameters.environment >>--environment << parameters.environment >><</ parameters.environment >>
-      <<# parameters.reporters >>--reporters << parameters.reporter >><</ parameters.reporter >>
+      <<# parameters.reporters >>--reporters << parameters.reporters >><</ parameters.reporters >>
       <<# parameters.globals >>--globals << parameters.globals >><</ parameters.globals >>
       <<# parameters.iteration-count >>--iteration-count << parameters.iteration-count >><</ parameters.iteration-count >>
       <<# parameters.iteration-data >>--iteration-data << parameters.iteration-data >><</ parameters.iteration-data >>
