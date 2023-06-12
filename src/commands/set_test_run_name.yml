@@ -1,7 +1,0 @@
-description: >
-  "Command to set the name of the test run that will be created in Testrail"
-
-steps:
-  - run:
-      name: Set TESTRAIL_TITLE
-      command: <<include(scripts/setRunName.sh)>>
