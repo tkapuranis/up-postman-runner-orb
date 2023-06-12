@@ -69,12 +69,13 @@ parameters:
         https://github.com/postmanlabs/newman#ssl-client-certificates
         https://github.com/postmanlabs/newman#reporters
     type: string
-    default: ''
+    default: '--reporter cli,testrail'
 steps:
   - run:
       name: Run Newman
       command: |
         source "$BASH_ENV"
+        echo $TESTRAIL_TITLE
         newman run << parameters.collection >>
         <<# parameters.environment >>--environment << parameters.environment >><</ parameters.environment >>
         <<# parameters.globals >>--globals << parameters.globals >><</ parameters.globals >>
