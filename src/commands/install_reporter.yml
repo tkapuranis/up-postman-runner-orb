@@ -11,6 +11,7 @@ steps:
       command: |
         echo export TESTRAIL_RUN_NAME="${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BRANCH}-$(date '+%F_%H:%M:%S')" >> "$BASH_ENV"; source "$BASH_ENV"
         echo export TESTRAIL_TITLE="${TESTRAIL_RUN_NAME}" >> "$BASH_ENV"; source "$BASH_ENV"
+        echo "$TESTRAIL_TITLE"
   - run:
       name: Echo Testrail title
       command: |
