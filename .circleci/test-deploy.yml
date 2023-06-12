@@ -39,8 +39,6 @@ workflows:
       - command-test:
           filters: *filters
       - up-postman-runner-orb/test:
-          environment:
-            TESTRAIL_TITLE: "up-postman-runner test branch"
           context:
             - postman
             - testrail
