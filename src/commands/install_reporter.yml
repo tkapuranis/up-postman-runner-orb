@@ -6,6 +6,7 @@ steps:
       name: Install Testrail Reporter
       command: |
         npm install newman-reporter-testrail@1.0.52 --global
+        DATENOW=$( date '+%F_%H:%M:%S' )
         TESTRAIL_RUN_NAME="$CIRCLE_PROJECT_REPONAME $CIRCLE_BRANCH $DATENOW"
         echo "$TESTRAIL_RUN_NAME"
         echo export TESTRAIL_TITLE="${TESTRAIL_RUN_NAME}" >> "$BASH_ENV"
