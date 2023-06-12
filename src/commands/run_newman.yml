@@ -77,18 +77,18 @@ steps:
         source "$BASH_ENV"
         echo $TESTRAIL_TITLE
         newman run << parameters.collection >> \
-        <<# parameters.environment >>--environment << parameters.environment >> \<</ parameters.environment >>
-        <<# parameters.globals >>--globals << parameters.globals >> \<</ parameters.globals >>
-        <<# parameters.iteration-count >>--iteration-count << parameters.iteration-count >> \<</ parameters.iteration-count >>
-        <<# parameters.iteration-data >>--iteration-data << parameters.iteration-data >> \<</ parameters.iteration-data >>
-        <<# parameters.folder >>--folder << parameters.folder >> \<</ parameters.folder >>
-        <<# parameters.export-environment >>--export-environment << parameters.export-environment >> \<</ parameters.export-environment >>
-        <<# parameters.export-globals >>--export-globals << parameters.export-globals >> \<</ parameters.export-globals >>
-        <<# parameters.export-collection >>--export-collection << parameters.export-collection >> \<</ parameters.export-collection >>
-        <<# parameters.timeout >>--timeout << parameters.timeout >> \<</ parameters.timeout >>
-        <<# parameters.timeout-request >>--timeout-request << parameters.timeout-request >> \<</ parameters.timeout-request >>
-        <<# parameters.timeout-script >>--timeout-script << parameters.timeout-script >> \<</ parameters.timeout-script >>
-        <<# parameters.insecure >>--insecure \<</ parameters.insecure >>
-        <<# parameters.ignore-redirects >>--ignore-redirects \<</ parameters.ignore-redirects >>
-        <<# parameters.delay-request >>--delay-request << parameters.delay-request >> \<</ parameters.delay-request >>
+        <<# parameters.environment >>--environment << parameters.environment >> \\ <</ parameters.environment >>
+        <<# parameters.globals >>--globals << parameters.globals >> \\ <</ parameters.globals >>
+        <<# parameters.iteration-count >>--iteration-count << parameters.iteration-count >> \\ <</ parameters.iteration-count >>
+        <<# parameters.iteration-data >>--iteration-data << parameters.iteration-data >> \\ <</ parameters.iteration-data >>
+        <<# parameters.folder >>--folder << parameters.folder >> \\ <</ parameters.folder >>
+        <<# parameters.export-environment >>--export-environment << parameters.export-environment >> \\ <</ parameters.export-environment >>
+        <<# parameters.export-globals >>--export-globals << parameters.export-globals >> \\ <</ parameters.export-globals >>
+        <<# parameters.export-collection >>--export-collection << parameters.export-collection >> \\ <</ parameters.export-collection >>
+        <<# parameters.timeout >>--timeout << parameters.timeout >> \\ <</ parameters.timeout >>
+        <<# parameters.timeout-request >>--timeout-request << parameters.timeout-request >> \\ <</ parameters.timeout-request >>
+        <<# parameters.timeout-script >>--timeout-script << parameters.timeout-script >> \\ <</ parameters.timeout-script >>
+        <<# parameters.insecure >>--insecure \\ <</ parameters.insecure >>
+        <<# parameters.ignore-redirects >>--ignore-redirects \\ <</ parameters.ignore-redirects >>
+        <<# parameters.delay-request >>--delay-request << parameters.delay-request >> \\ <</ parameters.delay-request >>
         << parameters.additional-options >>
