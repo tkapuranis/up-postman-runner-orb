@@ -15,5 +15,5 @@ steps:
   - run:
       name: Echo Testrail title
       command: |
-        echo cat "$BASH_ENV"
+        cat "$BASH_ENV"
         echo "$TESTRAIL_TITLE"
