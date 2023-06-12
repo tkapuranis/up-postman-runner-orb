@@ -31,9 +31,6 @@ jobs:
       - up-postman-runner-orb/install_reporter
       - run: |
           npm list -g newman-reporter-testrail
-      - up-postman-runner-orb/set_test_run_name
-      - run: |
-          echo $BASH_ENV
 workflows:
   test-deploy:
     jobs:
