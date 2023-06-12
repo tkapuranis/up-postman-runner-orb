@@ -78,7 +78,7 @@ parameters:
 steps:
   - run:
       name: Run Newman
-      command: |
+      command: >
           source "$BASH_ENV" &&
           newman run << parameters.collection >>
           <<# parameters.environment >>--environment << parameters.environment >><</ parameters.environment >>
