@@ -16,4 +16,5 @@ steps:
       name: Echo Testrail title
       command: |
         cat "$BASH_ENV"
+        source "$BASH_ENV"
         echo "$TESTRAIL_TITLE"
