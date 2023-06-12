@@ -108,7 +108,7 @@ steps:
       ignore-redirects: << parameters.ignore-redirects >>
       delay-request: << parameters.delay-request >>
       additional-options: << parameters.additional-options >>
-      reporter: << parameters.reporter >>
+      reporters: << parameters.reporters >>
   - persist_to_workspace:
       when: << parameters.persist-exports >>
       root: << parameters.persist-workspace-root >>
