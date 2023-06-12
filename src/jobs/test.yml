@@ -76,18 +76,6 @@ parameters:
       Custom reporter to use for results
     type: string
     default: ''
-  persist-exports:
-    description: Whether to persist exports from the Newman run.
-    type: boolean
-    default: false
-  persist-workspace-root:
-    description: The root directory for persisting Newman artifacts.
-    type: string
-    default: ~/project
-  persist-workspace-path:
-    description: The artifact directory, relative to persist-workspace-root, that contains Newman reports.
-    type: string
-    default: newman
 
 steps:
   - install_reporter
@@ -109,8 +97,3 @@ steps:
       delay-request: << parameters.delay-request >>
       additional-options: << parameters.additional-options >>
       reporters: << parameters.reporters >>
-  - persist_to_workspace:
-      when: << parameters.persist-exports >>
-      root: << parameters.persist-workspace-root >>
-      paths:
-        - << parameters.persist-workspace-path >>
