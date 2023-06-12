@@ -11,10 +11,6 @@ parameters:
     description: Environment file path or URL
     type: string
     default: ''
-  executor:
-    description: An executor to use with the run job.
-    type: executor
-    default: postman-newman-docker
   globals:
     description: Globals file path or URL
     type: string
