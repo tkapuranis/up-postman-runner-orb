@@ -9,8 +9,7 @@ steps:
   - run:
       name: Set Testrail run name
       command: |
-        echo export DATENOW=$( date '+%F_%H:%M:%S' ) >> "$BASH_ENV"; source "$BASH_ENV"
-        echo export TESTRAIL_RUN_NAME="${CIRCLE_PROJECT_REPONAME} ${CIRCLE_BRANCH} ${DATENOW}" >> "$BASH_ENV"; source "$BASH_ENV"
+        echo export TESTRAIL_RUN_NAME="${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BRANCH}-$(date '+%F_%H:%M:%S')" >> "$BASH_ENV"; source "$BASH_ENV"
         echo export TESTRAIL_TITLE="${TESTRAIL_RUN_NAME}" >> "$BASH_ENV"; source "$BASH_ENV"
   - run:
       name: Echo Testrail title
