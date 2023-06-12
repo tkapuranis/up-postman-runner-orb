@@ -72,7 +72,7 @@ parameters:
     default: ''
 steps:
   - run: >
-      source "$BASH_ENV"
+      source "$BASH_ENV" &&
       newman run << parameters.collection >>
       <<# parameters.environment >>--environment << parameters.environment >><</ parameters.environment >>
       <<# parameters.globals >>--globals << parameters.globals >><</ parameters.globals >>
