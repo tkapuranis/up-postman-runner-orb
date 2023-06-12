@@ -4,8 +4,4 @@ description: >
 steps:
   - run:
       name: Install Testrail Reporter
-      command: |
-        npm install newman-reporter-testrail@1.0.52 --global
-        TESTRAIL_TITLE="$CIRCLE_PROJECT_REPONAME $CIRCLE_BRANCH"
-        echo 'export TESTRAIL_TITLE='${TESTRAIL_TITLE} >> "$BASH_ENV"
-        source $BASH_ENV
+      command: <<include(scripts/installReporter.sh)>>
