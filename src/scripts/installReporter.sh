@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck source=/dev/null
 npm install newman-reporter-testrail@1.0.52 --global
 TESTRAIL_RUN_NAME="$CIRCLE_PROJECT_REPONAME $CIRCLE_BRANCH $DATENOW"
 echo "$TESTRAIL_RUN_NAME"
