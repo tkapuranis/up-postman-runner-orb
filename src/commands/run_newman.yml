@@ -72,7 +72,9 @@ parameters:
     default: '--reporter cli,testrail'
 steps:
   steps: 
-    - run: >
+    - run:
+      name: Run Newman
+      command: |
         newman run << parameters.collection >>
         <<# parameters.environment >>--environment << parameters.environment >><</ parameters.environment >>
         <<# parameters.globals >>--globals << parameters.globals >><</ parameters.globals >>
