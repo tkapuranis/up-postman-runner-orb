@@ -97,10 +97,6 @@ steps:
       #   ADDITIONAL_OPTIONS: <<parameters.additional-options>>
       name: Run Newman
     #  command: <<include(scripts/run_newman.sh)>>
-      
-      
-      
-      
       command: >
           source "$BASH_ENV" &&
           newman run << parameters.collection >>
