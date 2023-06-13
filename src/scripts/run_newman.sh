@@ -8,7 +8,6 @@ if [ -z "$TESTRAIL_TITLE" ]; then
 fi
 
 # Initialize NEWMAN_ARGS with collection value
-#NEWMAN_ARGS="""$COLLECTION""?apikey=""$POSTMAN_API_KEY"""
 NEWMAN_ARGS="$COLLECTION"
 echo "$NEWMAN_ARGS"
 
@@ -85,5 +84,5 @@ fi
 
 # Execute Newman command
 echo newman run "$NEWMAN_ARGS"
-newman run "$NEWMAN_ARGS"
+newman run "$NEWMAN_ARGS" --verbose
 #newman run https://api.getpostman.com/collections/20634702-00d96313-db26-4c47-bd1c-15948f77681a?apikey="$POSTMAN_API_KEY" --environment https://api.getpostman.com/environments/20634702-ce70ac3d-efdc-48ad-a601-0a47b7ce02b2?apikey="$POSTMAN_API_KEY" --reporters testrail --verbose
