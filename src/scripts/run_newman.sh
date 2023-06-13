@@ -1,7 +1,7 @@
 #!/bin/bash
 # shellcheck source=/dev/null
 
-Source the bash env if TESTRAIL_TITLE is empty
+# Source the bash env if TESTRAIL_TITLE is empty
 if [ -z "$TESTRAIL_TITLE" ]; then
   source "$BASH_ENV"
   echo "$TESTRAIL_TITLE"
