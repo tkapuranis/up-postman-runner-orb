@@ -13,7 +13,7 @@ echo "$NEWMAN_ARGS"
 
 # Appends Newman CLI args
 buildNewmanCommand() {
-    NEWMAN_ARGS+=$1
+    NEWMAN_ARGS=${NEWMAN_ARGS}$1
     echo "$NEWMAN_ARGS"
 }
 
