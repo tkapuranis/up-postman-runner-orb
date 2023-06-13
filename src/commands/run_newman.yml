@@ -81,7 +81,7 @@ steps:
         COLLECTION: <<parameters.collection>>
         ENVIRONMENT: <<parameters.environment>>
         REPORTERS: <<parameters.reporters>>
-        GLOBALS: <<parameters.globals
+        GLOBALS: <<parameters.globals>>
         ITERATION_COUNT: <<parameters.iteration-count>>
         ITERATION_DATA: <<parameters.iteration-data>>
         FOLDER: <<parameters.folder>>
