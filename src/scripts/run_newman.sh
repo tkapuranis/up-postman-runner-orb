@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # shellcheck source=/dev/null
 
 # Source the bash env if TESTRAIL_TITLE is empty
