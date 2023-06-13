@@ -9,6 +9,7 @@ fi
 
 # Initialize NEWMAN_ARGS with collection value
 NEWMAN_ARGS="$COLLECTION"
+echo "$NEWMAN_ARGS"
 
 # Appends Newman CLI args
 buildNewmanCommand() {
