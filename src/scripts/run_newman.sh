@@ -66,11 +66,11 @@ if [ "$TIMEOUT_SCRIPT" != "" ]; then
     buildNewmanCommand " --timeout-script $TIMEOUT_SCRIPT"
 fi
 
-if [ "$INSECURE" != "" ]; then
+if [ "$INSECURE" != 0 ]; then
     buildNewmanCommand " --insecure $INSECURE"
 fi
 
-if [ "$IGNORE_REDIRECTS" != "" ]; then
+if [ "$IGNORE_REDIRECTS" != 0 ]; then
     buildNewmanCommand " --ignore-redirects $IGNORE_REDIRECTS"
 fi
 
@@ -84,4 +84,4 @@ fi
 
 # Execute Newman command
 echo newman args: "$NEWMAN_ARGS"
-newman run "$NEWMAN_ARGS"
+newman run "${NEWMAN_ARGS}"
