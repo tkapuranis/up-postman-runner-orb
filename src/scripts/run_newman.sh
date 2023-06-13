@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # shellcheck source=/dev/null
 
 # Source the bash env if TESTRAIL_TITLE is empty
@@ -8,7 +8,7 @@ if [ -z "$TESTRAIL_TITLE" ]; then
 fi
 
 # Initialize NEWMAN_ARGS with collection value
-echo $COLLECTION | sed -e 's/$POSTMAN_API_KEY/\""$POSTMAN_API_KEY"\"/g'
+echo "$COLLECTION" | sed -e 's/$POSTMAN_API_KEY/\""$POSTMAN_API_KEY"\"/g'
 NEWMAN_ARGS="$COLLECTION"
 echo "$NEWMAN_ARGS"
 
