@@ -8,7 +8,7 @@ if [ -z "$TESTRAIL_TITLE" ]; then
 fi
 
 # Initialize NEWMAN_ARGS with collection value
-NEWMAN_ARGS=\""$COLLECTION"?apikey="$POSTMAN_API_KEY"\"
+NEWMAN_ARGS="""$COLLECTION""?apikey=""$POSTMAN_API_KEY"""
 echo "$NEWMAN_ARGS"
 
 # Appends Newman CLI args
