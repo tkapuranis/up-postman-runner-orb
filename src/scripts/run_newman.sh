@@ -84,4 +84,4 @@ fi
 
 # Execute Newman command
 echo newman args: "$NEWMAN_ARGS"
-newman run "${NEWMAN_ARGS}"
+newman run "${NEWMAN_ARGS}" --verbose
