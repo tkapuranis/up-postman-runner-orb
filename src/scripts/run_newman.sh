@@ -9,7 +9,6 @@ fi
 
 # Initialize NEWMAN_ARGS with collection value
 #NEWMAN_ARGS="""$COLLECTION""?apikey=""$POSTMAN_API_KEY"""
-COLLECTION="https://api.getpostman.com/collections/""$COLLECTION""?apikey=""$POSTMAN_API_KEY"""
 NEWMAN_ARGS="$COLLECTION"
 echo "$NEWMAN_ARGS"
 
@@ -20,7 +19,6 @@ buildNewmanCommand() {
 
 # Evaluate Newman args and build run command
 if [ "$ENVIRONMENT" != "" ]; then
-    ENVIRONMENT="https://api.getpostman.com/environments/""$ENVIRONMENT""?apikey=""$POSTMAN_API_KEY"""
     #buildNewmanCommand " --environment ""$ENVIRONMENT""?apikey=""$POSTMAN_API_KEY"""
     buildNewmanCommand " --environment $ENVIRONMENT"
 fi
