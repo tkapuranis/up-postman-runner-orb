@@ -43,8 +43,8 @@ workflows:
             - postman
             - testrail
           filters: *filters
-          collection: "https://api.getpostman.com/collections/20634702-00d96313-db26-4c47-bd1c-15948f77681a?apikey=$POSTMAN_API_KEY"
-          environment: "https://api.getpostman.com/environments/20634702-ce70ac3d-efdc-48ad-a601-0a47b7ce02b2?apikey=$POSTMAN_API_KEY"
+          collection: "https://api.getpostman.com/collections/20634702-00d96313-db26-4c47-bd1c-15948f77681a"
+          environment: "https://api.getpostman.com/environments/20634702-ce70ac3d-efdc-48ad-a601-0a47b7ce02b2"
           reporters: "testrail"
       # The orb must be re-packed for publishing, and saved to the workspace.
       - orb-tools/pack:

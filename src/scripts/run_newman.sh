@@ -8,8 +8,7 @@ if [ -z "$TESTRAIL_TITLE" ]; then
 fi
 
 # Initialize NEWMAN_ARGS with collection value
-echo "$COLLECTION" | sed -e 's/$POSTMAN_API_KEY/\""$POSTMAN_API_KEY"\"/g'
-NEWMAN_ARGS="$COLLECTION"
+NEWMAN_ARGS="$COLLECTION"?apikey="$POSTMAN_API_KEY"
 echo "$NEWMAN_ARGS"
 
 # Appends Newman CLI args
@@ -20,7 +19,7 @@ buildNewmanCommand() {
 
 # Evaluate Newman args and build run command
 if [ "$ENVIRONMENT" != "" ]; then
-    buildNewmanCommand " --environment $ENVIRONMENT"
+    buildNewmanCommand --environment "$ENVIRONMENT"?apikey="$POSTMAN_API_KEY"
 fi
 
 if [ "$REPORTERS" != "" ]; then
