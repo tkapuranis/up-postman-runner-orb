@@ -77,23 +77,23 @@ parameters:
     default: ''
 steps:
   - run:
+      environment:
+        COLLECTION: <<parameters.collection>>
+        ENVIRONMENT: <<parameters.environment>>
+        REPORTERS: <<parameters.reporters>>
+        GLOBALS: <<parameters.globals
+        ITERATION_COUNT: <<parameters.iteration-count>>
+        ITERATION_DATA: <<parameters.iteration-data>>
+        FOLDER: <<parameters.folder>>
+        EXPORT_ENVIRONMENT: <<parameters.export-environment>>
+        EXPORT_GLOBALS: <<parameters.export-globals>>
+        EXPORT_COLLECTION: <<parameters.export-collection>>
+        TIMEOUT: <<parameters.timeout>>
+        TIMEOUT_REQUEST: <<parameters.timeout-request>>
+        TIMEOUT_SCRIPT: <<parameters.timeout-script>>
+        INSECURE: <<parameters.insecure>>
+        IGNORE_REDIRECTS: <<parameters.ignore-redirects>>
+        DELAY_REQUEST: <<parameters.delay-request>>
+        ADDITIONAL_OPTIONS: <<parameters.additional-options>>
       name: Run Newman
-      command: >
-          source "$BASH_ENV" &&
-          newman run << parameters.collection >>
-          <<# parameters.environment >>--environment << parameters.environment >><</ parameters.environment >>
-          <<# parameters.reporters >>--reporters << parameters.reporters >><</ parameters.reporters >>
-          <<# parameters.globals >>--globals << parameters.globals >><</ parameters.globals >>
-          <<# parameters.iteration-count >>--iteration-count << parameters.iteration-count >><</ parameters.iteration-count >>
-          <<# parameters.iteration-data >>--iteration-data << parameters.iteration-data >><</ parameters.iteration-data >>
-          <<# parameters.folder >>--folder << parameters.folder >><</ parameters.folder >>
-          <<# parameters.export-environment >>--export-environment << parameters.export-environment >><</ parameters.export-environment >>
-          <<# parameters.export-globals >>--export-globals << parameters.export-globals >><</ parameters.export-globals >>
-          <<# parameters.export-collection >>--export-collection << parameters.export-collection >><</ parameters.export-collection >>
-          <<# parameters.timeout >>--timeout << parameters.timeout >><</ parameters.timeout >>
-          <<# parameters.timeout-request >>--timeout-request << parameters.timeout-request >><</ parameters.timeout-request >>
-          <<# parameters.timeout-script >>--timeout-script << parameters.timeout-script >><</ parameters.timeout-script >>
-          <<# parameters.insecure >>--insecure<</ parameters.insecure >>
-          <<# parameters.ignore-redirects >>--ignore-redirects<</ parameters.ignore-redirects >>
-          <<# parameters.delay-request >>--delay-request << parameters.delay-request >><</ parameters.delay-request >>
-          << parameters.additional-options >>
+      command: <<include(scripts/run_newman.sh)>>
