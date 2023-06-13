@@ -74,7 +74,7 @@ parameters:
     description:
       Custom reporter to use for results
     type: string
-    default: ''
+    default: 'testrail'
 steps:
   - run:
       # environment:
