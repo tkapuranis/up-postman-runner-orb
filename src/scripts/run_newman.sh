@@ -14,7 +14,6 @@ echo "$NEWMAN_ARGS"
 # Appends Newman CLI args
 buildNewmanCommand() {
     NEWMAN_ARGS=${NEWMAN_ARGS}$1
-    echo "$NEWMAN_ARGS"
 }
 
 # Evaluate Newman args and build run command
@@ -83,6 +82,6 @@ if [ "$ADDITIONAL_OPTIONS" != "" ]; then
 fi
 
 # Execute Newman command
-echo newman args: "$NEWMAN_ARGS"
+echo newman run "$NEWMAN_ARGS"
 newman run "$NEWMAN_ARGS"
 #newman run https://api.getpostman.com/collections/20634702-00d96313-db26-4c47-bd1c-15948f77681a?apikey="$POSTMAN_API_KEY" --environment https://api.getpostman.com/environments/20634702-ce70ac3d-efdc-48ad-a601-0a47b7ce02b2?apikey="$POSTMAN_API_KEY" --reporters testrail --verbose
