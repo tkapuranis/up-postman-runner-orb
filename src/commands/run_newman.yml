@@ -77,6 +77,12 @@ parameters:
     default: ''
 steps:
   - run:
+      name: Install Bash
+      command: |
+        apk update
+        apk upgrade
+        apk add bash
+  - run:
       environment:
         COLLECTION: <<parameters.collection>>
         ENVIRONMENT: <<parameters.environment>>
