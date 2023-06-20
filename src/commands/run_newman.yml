@@ -93,7 +93,7 @@ steps:
         TIMEOUT_SCRIPT: <<parameters.timeout-script>>
         INSECURE: <<parameters.insecure>>
         IGNORE_REDIRECTS: <<parameters.ignore-redirects>>
-        DELAY_REQUEST: <<parameters.delay-requests>>
+        DELAY_REQUEST: <<parameters.delay-request>>
         REPORTERS: <<parameters.reporters>>
         ADDITIONAL_OPTIONS: <<parameters.additional-options>>
       command: <<include(scripts/run_newman.sh)>>
