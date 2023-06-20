@@ -78,6 +78,24 @@ parameters:
 steps:
   - run:
       name: Run Newman
+      environment:
+        COLLECTION: <<parameters.collection>>
+        ENVIRONMENT: <<parameters.environment>>
+        GLOBALS: <<parameters.globals>>
+        ITERATION_COUNT: <<parameters.iteration-count>>
+        ITERATION_DATA: <<parameters.iteration-data>>
+        FOLDER: <<parameters.folder>>
+        EXPORT_ENVIRONMENT: <<parameters.export-environment>>
+        EXPORT_GLOBALS: <<parameters.export-globals>>
+        EXPORT_COLLECTION: <<parameters.export-collection>>
+        TIMEOUT: <<parameters.timeout>>
+        TIMEOUT_REQUEST: <<parameters.timeout-request>>
+        TIMEOUT_SCRIPT: <<parameters.timeout-script>>
+        INSECURE: <<parameters.insecure>>
+        IGNORE_REDIRECTS: <<parameters.ignore-redirects>>
+        DELAY_REQUEST: <<parameters.delay-requests>>
+        REPORTERS: <<parameters.reporters>>
+        ADDITIONAL_OPTIONS: <<parameters.additional-options>>
       command: <<include(scripts/run_newman.sh)>>
       # command: >
       #     source "$BASH_ENV" &&
