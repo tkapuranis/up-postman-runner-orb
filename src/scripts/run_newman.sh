@@ -8,7 +8,7 @@ if [ -z "$TESTRAIL_TITLE" ]; then
 fi
 
 # Initialize NEWMAN_ARGS with collection value
-COLLECTION="https://api.getpostman.com/collections/""$COLLECTION""?apikey=""$POSTMAN_API_KEY"""
+COLLECTION=https://api.getpostman.com/collections/"$COLLECTION"?apikey="$POSTMAN_API_KEY"
 echo "$COLLECTION"
 NEWMAN_ARGS="$COLLECTION"
 echo "$NEWMAN_ARGS"
@@ -20,7 +20,7 @@ buildNewmanCommand() {
 
 # Evaluate Newman args and build run command
 if [ "$ENVIRONMENT" != "" ]; then
-    FULL_ENV="https://api.getpostman.com/environments/""$ENVIRONMENT""?apikey=""$POSTMAN_API_KEY"""
+    FULL_ENV=https://api.getpostman.com/environments/"$ENVIRONMENT"?apikey="$POSTMAN_API_KEY"
     buildNewmanCommand " --environment $FULL_ENV"
 fi
 
@@ -86,4 +86,4 @@ fi
 
 # Execute Newman command
 echo "$NEWMAN_ARGS"
-newman run "${NEWMAN_ARGS}"
+newman run ${NEWMAN_ARGS}
