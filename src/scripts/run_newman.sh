@@ -8,7 +8,7 @@ if [ -z "$TESTRAIL_TITLE" ]; then
 fi
 
 # Initialize NEWMAN_ARGS with collection value
-COLLECTION=https://api.getpostman.com/collections/20634702-00d96313-db26-4c47-bd1c-15948f77681a?apikey="$POSTMAN_API_KEY"
+COLLECTION=https://api.getpostman.com/collections/"$COLLECTION"?apikey="$POSTMAN_API_KEY"
 echo "$COLLECTION"
 NEWMAN_ARGS="$COLLECTION"
 echo "$NEWMAN_ARGS"
