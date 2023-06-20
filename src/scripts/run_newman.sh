@@ -86,4 +86,4 @@ fi
 
 # Execute Newman command
 echo "$NEWMAN_ARGS"
-newman run ${NEWMAN_ARGS}
+newman run "${NEWMAN_ARGS}"
