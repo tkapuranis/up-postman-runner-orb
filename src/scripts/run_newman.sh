@@ -8,6 +8,8 @@ if [ -z "$TESTRAIL_TITLE" ]; then
 fi
 
 # Initialize NEWMAN_ARGS with collection value
+
+# shellcheck disable=SC2125
 COLLECTION=https://api.getpostman.com/collections/"$COLLECTION"?apikey="$POSTMAN_API_KEY"
 echo "$COLLECTION"
 NEWMAN_ARGS="$COLLECTION"
@@ -20,6 +22,7 @@ buildNewmanCommand() {
 
 # Evaluate Newman args and build run command
 if [ "$ENVIRONMENT" != "" ]; then
+    # shellcheck disable=SC2125
     FULL_ENV=https://api.getpostman.com/environments/"$ENVIRONMENT"?apikey="$POSTMAN_API_KEY"
     buildNewmanCommand " --environment $FULL_ENV"
 fi
@@ -86,4 +89,5 @@ fi
 
 # Execute Newman command
 echo "$NEWMAN_ARGS"
+# shellcheck disable=SC2086
 newman run ${NEWMAN_ARGS}
