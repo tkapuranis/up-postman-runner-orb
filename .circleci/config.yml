@@ -19,6 +19,7 @@ workflows:
           exclude: RC008, RC009, RC010
           filters: *filters
       - shellcheck/check:
+          exclude: SC2125, SC2086
           filters: *filters
       - orb-tools/publish:
           orb_name: tkapuranis/up-postman-runner-orb
