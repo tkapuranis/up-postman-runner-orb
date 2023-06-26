@@ -5,7 +5,7 @@ steps:
   - run:
       name: Install Testrail Reporter
       command: |
-        npm install newman-reporter-testrail@1.0.52 --global
+        npm install newman-reporter-testrail@1 --global
   - run:
       name: Set Testrail run name
       command: |
